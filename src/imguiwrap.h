@@ -44,4 +44,4 @@ struct ImGuiWrapConfig
 // imgui_main implements a main-loop that constructs a GL window and calls the supplied
 // mainFn every frame until the app is closed.
 // See dear::SetHostWindowSize if your callback needs to change the GL window size.
-extern int imgui_main(const ImGuiWrapConfig& config, const ImGuiWrapperFn& mainFn) noexcept;
+extern int imgui_main(const ImGuiWrapConfig& config, const ImGuiWrapperFn& mainFn, const std::function<void()>& setupCallback) noexcept;
